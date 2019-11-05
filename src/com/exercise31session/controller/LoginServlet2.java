@@ -51,6 +51,7 @@ public class LoginServlet2 extends HttpServlet {
 			HttpSession misesion = request.getSession();
 			misesion.setAttribute("user", username);
 			misesion.setAttribute("pass", password);
+			response.sendRedirect("Welcome.jsp");
 		}else {
 			output.println("Wrong password");
 		}
